@@ -37,11 +37,17 @@ template <typename T>
 class Tensor{
     public:
         // CONSTRUCTORS
+
         // constructor fills zeroes
         Tensor(const std::vector<size_t>& shape, Device device = Device::CPU, bool requires_grad = false): shape_(shape), device_(device), requires_grad_(requires_grad), dtype_(get_dtype<T>()) {
             size_ = 1;
-            for (auto dim : shape_) size_ *= dim;
+            strides_.push_back(1); // initial stride is 1
+            for (auto dim : shape_) {
+                size_ *= dim;
+                if(strides_.size() < shape_.size()) strides_.push_back(strides_.back() * dim); // calculate stride for each dimension
+            }
             data_ = std::make_unique<T[]>(size_); // by default initializes each element to zero
+            raw_ptr_ = data_.get();
         }
 
         // empty constructor & no memory allocation
@@ -49,37 +55,53 @@ class Tensor{
             : shape_(shape), device_(device), requires_grad_(requires_grad), dtype_(get_dtype<T>()) 
         {
             size_ = 1;
-            for (auto dim : shape_) size_ *= dim;
+            strides_.push_back(1);
+            for (auto dim : shape_) {
+                size_ *= dim;
+                if(strides_.size() < shape_.size()) strides_.push_back(strides_.back() * dim);
+            }
             data_ = nullptr;
+            raw_ptr_ = nullptr;
         }
 
         // constructor fills 'num' value
         Tensor(const std::vector<size_t>& shape, T num, Device device = Device::CPU, bool requires_grad = false): shape_(shape), device_(device), requires_grad_(requires_grad), dtype_(get_dtype<T>()) {
             size_ = 1;
-            for (auto dim : shape_) size_ *= dim;
+            strides_.push_back(1);
+            for (auto dim : shape_) {
+                size_ *= dim;
+                if(strides_.size() < shape_.size()) strides_.push_back(strides_.back() * dim);
+            }
             data_ = std::make_unique<T[]>(size_);
+            raw_ptr_ = data_.get();
             std::fill(data_.get(), data_.get() + size_, num);
         }
 
         // constructor fills by vector
         Tensor(const std::vector<size_t>& shape, std::vector<T>& data, Device device = Device::CPU, bool requires_grad = false): shape_(shape), device_(device), requires_grad_(requires_grad), dtype_(get_dtype<T>()) {
             size_ = 1;
-            for (auto dim : shape_) size_ *= dim;
-            if (size_ != data.size()) {
-                throw std::invalid_argument("Invalid Shape");
+            strides_.push_back(1);
+            for (auto dim : shape_) {
+                size_ *= dim;
+                if(strides_.size() < shape_.size()) strides_.push_back(strides_.back() * dim);
             }
+            if (size_ != data.size()) throw std::invalid_argument("Invalid Shape");
             data_ = std::make_unique<T[]>(size_);
+            raw_ptr_ = data_.get();
             std::move(data.begin(), data.end(), data_.get()); // using move instead of copy
         }
 
         // constructor fills by initializer_list
         Tensor(const std::vector<size_t>& shape, std::initializer_list<T> data, Device device = Device::CPU, bool requires_grad = false): shape_(shape), device_(device), requires_grad_(requires_grad), dtype_(get_dtype<T>()) {
             size_ = 1;
-            for (auto dim : shape_) size_ *= dim;
-            if (size_ != data.size()) {
-                throw std::invalid_argument("Invalid Shape");
+            strides_.push_back(1);
+            for (auto dim : shape_) {
+                size_ *= dim;
+                if(strides_.size() < shape_.size()) strides_.push_back(strides_.back() * dim);
             }
+            if (size_ != data.size()) throw std::invalid_argument("Invalid Shape");
             data_ = std::make_unique<T[]>(size_);
+            raw_ptr_ = data_.get();
             std::copy(data.begin(), data.end(), data_.get()); // have to use copy here because initializer_list does not support move 
         }
 
@@ -112,26 +134,87 @@ class Tensor{
         // check if tensor requires grad or not
         bool requires_grad() const { return requires_grad_; }
 
-        // get the data pointer of the tensor
+        // get the unique data pointer of the tensor
         T* data_ptr() const { return data_.get(); }
 
-        // DATA MANIPULATION - TO DO
+        // get the raw pointer of the tensor
+        T* raw_ptr() const { return raw_ptr_; }
+
+        // DATA MANIPULATION
+
+        // accessing single element
+        T get(const std::vector<size_t>& indices) const {
+            if (indices.size() != shape_.size()) throw std::out_of_range("Invalid Tensor Indexing");
+            size_t offset = 0;
+            for (size_t i = 0; i < indices.size(); ++i) {
+                if (indices[i] >= shape_[i]) throw std::out_of_range("Index Out of Bounds");
+                offset += indices[i] * strides_[i];
+            }
+            return *(data_.get() + offset);  // Pointer arithmetic
+        }
+
+        // transponse
+        Tensor<T> transpose() const{
+            Tensor<T> transposed(raw_ptr_, shape_, strides_, device_, requires_grad_, dtype_, size_);
+            std::reverse(transposed.shape_.begin(), transposed.shape_.end());
+            std::reverse(transposed.strides_.begin(), transposed.strides_.end());
+            return transposed;
+        }
+
+        // reshape
+        Tensor<T> reshape(const std::vector<size_t>& new_shape) const{
+            size_t new_size = 1;
+            for(auto dim : new_shape) new_size *= dim;
+            if(new_size != size_) throw std::invalid_argument("Invalid Reshape Size");
+            std::vector<size_t> new_strides;
+            new_strides.push_back(1);
+            for(size_t i = 0; i < new_shape.size() - 1; i++) {
+                new_strides.push_back(new_strides.back() * new_shape[i]);
+            }
+            return Tensor<T>(raw_ptr_, new_shape, new_strides, device_, requires_grad_, dtype_, size_);
+        }
+
+        // flatten
+        Tensor<T> flatten() const{
+            std::vector<size_t> new_shape = {size_};
+            std::vector<size_t> new_strides = {1};
+            return Tensor<T>(raw_ptr_, new_shape, new_strides, device_, requires_grad_, dtype_, size_);
+        }
+
+        // copy - creates a deep copy of the tensor
+        Tensor<T> copy() const{
+            Tensor<T> copied_tensor(shape_, device_, requires_grad_);
+            std::copy(raw_ptr_, raw_ptr_ + size_, copied_tensor.raw_ptr_);
+            return copied_tensor;
+        }
+
+        // MATH OPERATIONS
+
+        
 
 
     private:
         std::unique_ptr<T[]> data_;
+        T* raw_ptr_;
         std::vector<size_t> shape_;
+        std::vector<size_t> strides_;
         std::size_t size_;
         DType dtype_;
         Device device_;
         bool requires_grad_;
+
+        // View constructor
+        Tensor(T* raw_ptr, const std::vector<size_t>& shape, const std::vector<size_t>& strides, Device device, bool requires_grad, DType dtype, size_t size) : raw_ptr_(raw_ptr), shape_(shape), strides_(strides), size_(size), device_(device), requires_grad_(requires_grad), dtype_(dtype){
+            data_ = nullptr;
+        }
+
     };
 
 // get the data of the tensor as a stream
 template<typename T>
 std::ostream& operator<<(std::ostream &os, const Tensor<T> &tensor){
     for(size_t i=0; i<tensor.size(); i++){
-        os << tensor.data_ptr()[i] << " ";
+        os << tensor.raw_ptr()[i] << " ";
     }
     return os;
 }

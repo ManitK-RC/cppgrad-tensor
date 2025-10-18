@@ -37,8 +37,32 @@ int main() {
     cout<<tensor1.device()<<endl;
     cout<<tensor1.dtype()<<endl;
 
-    // DATA MANIPULATION - TO DO
-
+    // DATA MANIPULATION
     
+    // 1. accessing single element 
+    Tensor<float> tensor3({1,2,3}, {1,2,3,4,5,6});
+    float a = tensor3.get({0,1,2});
+    cout<<a<<endl;
+
+    // 2. transpose
+    cout<<tensor3<<endl;
+    Tensor<float> tensor4 = tensor3.transpose();
+    cout<<tensor4<<endl;
+
+    // 3. reshape
+    Tensor<float> tensor5 = tensor3.reshape({2,3,1});
+    for(auto dim : tensor5.shape()) cout<<dim<<" ";
+    cout<<endl;
+
+    // 4. flatten
+    Tensor<float> tensor6 = tensor3.flatten();
+    for(auto dim : tensor5.shape()) cout<<dim<<" ";
+    cout<<endl;
+
+    // 5. copy
+    Tensor<float> tensor7 = tensor3.copy();
+    cout<<tensor3.data_ptr()<<endl;
+    cout<<tensor7.data_ptr()<<endl;
+
     return 0;
 }

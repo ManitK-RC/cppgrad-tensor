@@ -41,6 +41,9 @@
         "queue": "cpp",
         "stack": "cpp",
         "variant": "cpp",
-        "__config": "cpp"
+        "__config": "cpp",
+        "__hash_table": "cpp",
+        "deque": "cpp",
+        "unordered_map": "cpp"
     }
 }
