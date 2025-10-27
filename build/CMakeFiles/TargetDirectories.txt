@@ -1,0 +1,3 @@
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles/examples.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles/edit_cache.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles/rebuild_cache.dir
