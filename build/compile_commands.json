@@ -1,26 +1,68 @@
 [
 {
   "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
+  "command": "/usr/bin/clang++ -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -I/opt/homebrew/Cellar/openblas/0.3.30/include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src -g -arch arm64 -std=c++26 -O3 -o CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp",
+  "output": "CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.o"
+},
+{
+  "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
+  "command": "/usr/bin/clang++ -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -I/opt/homebrew/Cellar/openblas/0.3.30/include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src -g -arch arm64 -std=c++26 -O3 -o CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp",
+  "output": "CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o"
+},
+{
+  "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
+  "command": "/usr/bin/clang++ -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -I/opt/homebrew/Cellar/openblas/0.3.30/include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src -g -arch arm64 -std=c++26 -O3 -o CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp",
+  "output": "CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o"
+},
+{
+  "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
   "command": "/usr/bin/clang++ -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -g -arch arm64 -std=c++26 -o CMakeFiles/examples.dir/test/examples.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/test/examples.cpp",
   "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/test/examples.cpp",
   "output": "CMakeFiles/examples.dir/test/examples.cpp.o"
 },
 {
   "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
-  "command": "/usr/bin/clang++ -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -g -arch arm64 -std=c++26 -o CMakeFiles/examples.dir/src/tensor.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp",
-  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp",
-  "output": "CMakeFiles/examples.dir/src/tensor.cpp.o"
+  "command": "/usr/bin/clang++ -DBENCHMARK_STATIC_DEFINE -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native -o benchmarks/CMakeFiles/transpose_benchmarks.dir/src/transpose_benchmark.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/transpose_benchmark.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/transpose_benchmark.cpp",
+  "output": "benchmarks/CMakeFiles/transpose_benchmarks.dir/src/transpose_benchmark.cpp.o"
 },
 {
   "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
-  "command": "/usr/bin/clang++ -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -g -arch arm64 -std=c++26 -o CMakeFiles/examples.dir/src/tensor_ops.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp",
-  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp",
-  "output": "CMakeFiles/examples.dir/src/tensor_ops.cpp.o"
+  "command": "/usr/bin/clang++ -DBENCHMARK_STATIC_DEFINE -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native -o benchmarks/CMakeFiles/matmul_benchmarks.dir/src/matmul_benchmark.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/matmul_benchmark.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/matmul_benchmark.cpp",
+  "output": "benchmarks/CMakeFiles/matmul_benchmarks.dir/src/matmul_benchmark.cpp.o"
 },
 {
   "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
-  "command": "/usr/bin/clang++ -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -g -arch arm64 -std=c++26 -o CMakeFiles/examples.dir/src/blas.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp",
-  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp",
-  "output": "CMakeFiles/examples.dir/src/blas.cpp.o"
+  "command": "/usr/bin/clang++ -DBENCHMARK_STATIC_DEFINE -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native -o benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/src/blas_matmul_benchmark.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_matmul_benchmark.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_matmul_benchmark.cpp",
+  "output": "benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/src/blas_matmul_benchmark.cpp.o"
+},
+{
+  "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
+  "command": "/usr/bin/clang++ -DBENCHMARK_STATIC_DEFINE -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native -o benchmarks/CMakeFiles/dot_benchmarks.dir/src/dot_benchmark.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/dot_benchmark.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/dot_benchmark.cpp",
+  "output": "benchmarks/CMakeFiles/dot_benchmarks.dir/src/dot_benchmark.cpp.o"
+},
+{
+  "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
+  "command": "/usr/bin/clang++ -DBENCHMARK_STATIC_DEFINE -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native -o benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_dot_benchmark.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_dot_benchmark.cpp",
+  "output": "benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o"
+},
+{
+  "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
+  "command": "/usr/bin/clang++ -DBENCHMARK_STATIC_DEFINE -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native -o benchmarks/CMakeFiles/tensordot_benchmarks.dir/src/tensordot_benchmark.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/tensordot_benchmark.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/tensordot_benchmark.cpp",
+  "output": "benchmarks/CMakeFiles/tensordot_benchmarks.dir/src/tensordot_benchmark.cpp.o"
+},
+{
+  "directory": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
+  "command": "/usr/bin/clang++ -DBENCHMARK_STATIC_DEFINE -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native -o benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/src/blas_tensordot_benchmark.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_tensordot_benchmark.cpp",
+  "file": "/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_tensordot_benchmark.cpp",
+  "output": "benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/src/blas_tensordot_benchmark.cpp.o"
 }
 ]

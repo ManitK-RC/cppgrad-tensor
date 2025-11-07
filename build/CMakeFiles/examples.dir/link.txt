@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm/lib CMakeFiles/examples.dir/test/examples.cpp.o CMakeFiles/examples.dir/src/tensor.cpp.o CMakeFiles/examples.dir/src/tensor_ops.cpp.o CMakeFiles/examples.dir/src/blas.cpp.o -o examples
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm/lib CMakeFiles/examples.dir/test/examples.cpp.o -o examples  libcppgrad_tensor.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib

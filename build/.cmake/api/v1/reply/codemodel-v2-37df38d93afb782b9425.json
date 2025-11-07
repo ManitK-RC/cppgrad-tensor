@@ -1,0 +1,151 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						5
+					]
+				},
+				{
+					"build" : "benchmarks",
+					"jsonFile" : "directory-benchmarks-Debug-f9c487a9ea6598b2a7ae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "benchmarks",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						4,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "cppgrad_examples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "blas_dot_benchmarks::@099d4941661e36fe2606",
+					"jsonFile" : "target-blas_dot_benchmarks-Debug-fc6be065a6ec23d7f4da.json",
+					"name" : "blas_dot_benchmarks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "blas_matmul_benchmarks::@099d4941661e36fe2606",
+					"jsonFile" : "target-blas_matmul_benchmarks-Debug-dd2ef4c98771a46dc0d6.json",
+					"name" : "blas_matmul_benchmarks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "blas_tensordot_benchmarks::@099d4941661e36fe2606",
+					"jsonFile" : "target-blas_tensordot_benchmarks-Debug-7cd1f0b509acd3844c35.json",
+					"name" : "blas_tensordot_benchmarks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cppgrad_tensor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cppgrad_tensor-Debug-b16bd06d0e088c4155d6.json",
+					"name" : "cppgrad_tensor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "dot_benchmarks::@099d4941661e36fe2606",
+					"jsonFile" : "target-dot_benchmarks-Debug-8c9ff8c8304a2035d357.json",
+					"name" : "dot_benchmarks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "examples::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-examples-Debug-171dd9b0f03a8c31f45a.json",
+					"name" : "examples",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "matmul_benchmarks::@099d4941661e36fe2606",
+					"jsonFile" : "target-matmul_benchmarks-Debug-b5318366d5f626dcf2e9.json",
+					"name" : "matmul_benchmarks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tensordot_benchmarks::@099d4941661e36fe2606",
+					"jsonFile" : "target-tensordot_benchmarks-Debug-634e50625da27cfbed7b.json",
+					"name" : "tensordot_benchmarks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "transpose_benchmarks::@099d4941661e36fe2606",
+					"jsonFile" : "target-transpose_benchmarks-Debug-5bdacebd3ed8d944d667.json",
+					"name" : "transpose_benchmarks",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/manitk/Documents/RC-Github/cppgrad-tensor/build",
+		"source" : "/Users/manitk/Documents/RC-Github/cppgrad-tensor"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

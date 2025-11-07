@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 #include <cstddef>
+#include <span>
 #include "types.hpp"
 
 namespace cppgrad {
@@ -45,14 +46,21 @@ public:
     T get(const std::vector<size_t>& indices) const;
     Tensor<T> transpose() const;
     Tensor<T> reshape(const std::vector<size_t>& new_shape) const;
+    Tensor<T> permute(const std::span<const size_t>& axes) const;
     Tensor<T> flatten() const;
     Tensor<T> copy() const;
     Tensor<T> squeeze(int dim = -1) const;
 
     // BLAS OPERATIONS
     static Tensor<T> dot(const Tensor<T>& a, const Tensor<T>& b);
-    // static Tensor<T> tensordot(const Tensor<T>& a, const Tensor<T>& b);
     static Tensor<T> matmul(const Tensor<T>& a, const Tensor<T>& b);
+    static Tensor<T> tensordot(const Tensor<T>& a, const Tensor<T>& b, std::span<const int> a_axes, std::span<const int> b_axes);
+    static Tensor<T> tensordot(const Tensor<T>& a, const Tensor<T>& b, size_t axis);
+
+    static Tensor<float> blas_dot(const Tensor<float>& a, const Tensor<float>& b);
+    static Tensor<float> blas_matmul(const Tensor<float>& a, const Tensor<float>& b);
+    static Tensor<float> blas_tensordot(const Tensor<float>& a, const Tensor<float>& b, std::span<const int> a_axes, std::span<const int> b_axes);
+    static Tensor<float> blas_tensordot(const Tensor<float>& a, const Tensor<float>& b, size_t axis);
 
 private:
     std::unique_ptr<T[]> data_;

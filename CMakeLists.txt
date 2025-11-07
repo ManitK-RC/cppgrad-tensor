@@ -1,16 +1,18 @@
 cmake_minimum_required(VERSION 3.20)
 project(cppgrad_examples)
 
-# Add executable with all sources
-add_executable(examples 
-    test/examples.cpp
+add_library(cppgrad_tensor
     src/tensor.cpp
-    src/tensor_ops.cpp
+    src/tensor_ops.cpp  
     src/blas.cpp
 )
 
-# Include directories
-target_include_directories(examples PRIVATE include)
+target_include_directories(cppgrad_tensor PUBLIC include)
 
-# Simple C++26 flag
+target_compile_options(cppgrad_tensor PRIVATE -std=c++26 -O3)
+
+add_executable(examples test/examples.cpp)
+target_link_libraries(examples PRIVATE cppgrad_tensor)
 target_compile_options(examples PRIVATE -std=c++26)
+
+add_subdirectory(benchmarks)

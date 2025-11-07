@@ -63,34 +63,109 @@ CMAKE_BINARY_DIR = /Users/manitk/Documents/RC-Github/cppgrad-tensor/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/cppgrad_tensor.dir/all
 all: CMakeFiles/examples.dir/all
+all: benchmarks/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/cppgrad_tensor.dir/codegen
 codegen: CMakeFiles/examples.dir/codegen
+codegen: benchmarks/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: benchmarks/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/cppgrad_tensor.dir/clean
 clean: CMakeFiles/examples.dir/clean
+clean: benchmarks/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory benchmarks
+
+# Recursive "all" directory target.
+benchmarks/all: benchmarks/CMakeFiles/transpose_benchmarks.dir/all
+benchmarks/all: benchmarks/CMakeFiles/matmul_benchmarks.dir/all
+benchmarks/all: benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/all
+benchmarks/all: benchmarks/CMakeFiles/dot_benchmarks.dir/all
+benchmarks/all: benchmarks/CMakeFiles/blas_dot_benchmarks.dir/all
+benchmarks/all: benchmarks/CMakeFiles/tensordot_benchmarks.dir/all
+benchmarks/all: benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/all
+.PHONY : benchmarks/all
+
+# Recursive "codegen" directory target.
+benchmarks/codegen: benchmarks/CMakeFiles/transpose_benchmarks.dir/codegen
+benchmarks/codegen: benchmarks/CMakeFiles/matmul_benchmarks.dir/codegen
+benchmarks/codegen: benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/codegen
+benchmarks/codegen: benchmarks/CMakeFiles/dot_benchmarks.dir/codegen
+benchmarks/codegen: benchmarks/CMakeFiles/blas_dot_benchmarks.dir/codegen
+benchmarks/codegen: benchmarks/CMakeFiles/tensordot_benchmarks.dir/codegen
+benchmarks/codegen: benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/codegen
+.PHONY : benchmarks/codegen
+
+# Recursive "preinstall" directory target.
+benchmarks/preinstall:
+.PHONY : benchmarks/preinstall
+
+# Recursive "clean" directory target.
+benchmarks/clean: benchmarks/CMakeFiles/transpose_benchmarks.dir/clean
+benchmarks/clean: benchmarks/CMakeFiles/matmul_benchmarks.dir/clean
+benchmarks/clean: benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/clean
+benchmarks/clean: benchmarks/CMakeFiles/dot_benchmarks.dir/clean
+benchmarks/clean: benchmarks/CMakeFiles/blas_dot_benchmarks.dir/clean
+benchmarks/clean: benchmarks/CMakeFiles/tensordot_benchmarks.dir/clean
+benchmarks/clean: benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/clean
+.PHONY : benchmarks/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/cppgrad_tensor.dir
+
+# All Build rule for target.
+CMakeFiles/cppgrad_tensor.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=7,8,9,10 "Built target cppgrad_tensor"
+.PHONY : CMakeFiles/cppgrad_tensor.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cppgrad_tensor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cppgrad_tensor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
+.PHONY : CMakeFiles/cppgrad_tensor.dir/rule
+
+# Convenience name for target.
+cppgrad_tensor: CMakeFiles/cppgrad_tensor.dir/rule
+.PHONY : cppgrad_tensor
+
+# codegen rule for target.
+CMakeFiles/cppgrad_tensor.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=7,8,9,10 "Finished codegen for target cppgrad_tensor"
+.PHONY : CMakeFiles/cppgrad_tensor.dir/codegen
+
+# clean rule for target.
+CMakeFiles/cppgrad_tensor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/clean
+.PHONY : CMakeFiles/cppgrad_tensor.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/examples.dir
 
 # All Build rule for target.
-CMakeFiles/examples.dir/all:
+CMakeFiles/examples.dir/all: CMakeFiles/cppgrad_tensor.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target examples"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=13,14 "Built target examples"
 .PHONY : CMakeFiles/examples.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/examples.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/examples.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
 .PHONY : CMakeFiles/examples.dir/rule
@@ -102,13 +177,237 @@ examples: CMakeFiles/examples.dir/rule
 # codegen rule for target.
 CMakeFiles/examples.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target examples"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=13,14 "Finished codegen for target examples"
 .PHONY : CMakeFiles/examples.dir/codegen
 
 # clean rule for target.
 CMakeFiles/examples.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/clean
 .PHONY : CMakeFiles/examples.dir/clean
+
+#=============================================================================
+# Target rules for target benchmarks/CMakeFiles/transpose_benchmarks.dir
+
+# All Build rule for target.
+benchmarks/CMakeFiles/transpose_benchmarks.dir/all: CMakeFiles/cppgrad_tensor.dir/all
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/transpose_benchmarks.dir/build.make benchmarks/CMakeFiles/transpose_benchmarks.dir/depend
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/transpose_benchmarks.dir/build.make benchmarks/CMakeFiles/transpose_benchmarks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=19,20 "Built target transpose_benchmarks"
+.PHONY : benchmarks/CMakeFiles/transpose_benchmarks.dir/all
+
+# Build rule for subdir invocation for target.
+benchmarks/CMakeFiles/transpose_benchmarks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmarks/CMakeFiles/transpose_benchmarks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
+.PHONY : benchmarks/CMakeFiles/transpose_benchmarks.dir/rule
+
+# Convenience name for target.
+transpose_benchmarks: benchmarks/CMakeFiles/transpose_benchmarks.dir/rule
+.PHONY : transpose_benchmarks
+
+# codegen rule for target.
+benchmarks/CMakeFiles/transpose_benchmarks.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/transpose_benchmarks.dir/build.make benchmarks/CMakeFiles/transpose_benchmarks.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=19,20 "Finished codegen for target transpose_benchmarks"
+.PHONY : benchmarks/CMakeFiles/transpose_benchmarks.dir/codegen
+
+# clean rule for target.
+benchmarks/CMakeFiles/transpose_benchmarks.dir/clean:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/transpose_benchmarks.dir/build.make benchmarks/CMakeFiles/transpose_benchmarks.dir/clean
+.PHONY : benchmarks/CMakeFiles/transpose_benchmarks.dir/clean
+
+#=============================================================================
+# Target rules for target benchmarks/CMakeFiles/matmul_benchmarks.dir
+
+# All Build rule for target.
+benchmarks/CMakeFiles/matmul_benchmarks.dir/all: CMakeFiles/cppgrad_tensor.dir/all
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/matmul_benchmarks.dir/depend
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/matmul_benchmarks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=15,16 "Built target matmul_benchmarks"
+.PHONY : benchmarks/CMakeFiles/matmul_benchmarks.dir/all
+
+# Build rule for subdir invocation for target.
+benchmarks/CMakeFiles/matmul_benchmarks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmarks/CMakeFiles/matmul_benchmarks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
+.PHONY : benchmarks/CMakeFiles/matmul_benchmarks.dir/rule
+
+# Convenience name for target.
+matmul_benchmarks: benchmarks/CMakeFiles/matmul_benchmarks.dir/rule
+.PHONY : matmul_benchmarks
+
+# codegen rule for target.
+benchmarks/CMakeFiles/matmul_benchmarks.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/matmul_benchmarks.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=15,16 "Finished codegen for target matmul_benchmarks"
+.PHONY : benchmarks/CMakeFiles/matmul_benchmarks.dir/codegen
+
+# clean rule for target.
+benchmarks/CMakeFiles/matmul_benchmarks.dir/clean:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/matmul_benchmarks.dir/clean
+.PHONY : benchmarks/CMakeFiles/matmul_benchmarks.dir/clean
+
+#=============================================================================
+# Target rules for target benchmarks/CMakeFiles/blas_matmul_benchmarks.dir
+
+# All Build rule for target.
+benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/all: CMakeFiles/cppgrad_tensor.dir/all
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/depend
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=3,4 "Built target blas_matmul_benchmarks"
+.PHONY : benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/all
+
+# Build rule for subdir invocation for target.
+benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
+.PHONY : benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/rule
+
+# Convenience name for target.
+blas_matmul_benchmarks: benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/rule
+.PHONY : blas_matmul_benchmarks
+
+# codegen rule for target.
+benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=3,4 "Finished codegen for target blas_matmul_benchmarks"
+.PHONY : benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/codegen
+
+# clean rule for target.
+benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/clean:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/clean
+.PHONY : benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/clean
+
+#=============================================================================
+# Target rules for target benchmarks/CMakeFiles/dot_benchmarks.dir
+
+# All Build rule for target.
+benchmarks/CMakeFiles/dot_benchmarks.dir/all: CMakeFiles/cppgrad_tensor.dir/all
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/dot_benchmarks.dir/build.make benchmarks/CMakeFiles/dot_benchmarks.dir/depend
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/dot_benchmarks.dir/build.make benchmarks/CMakeFiles/dot_benchmarks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=11,12 "Built target dot_benchmarks"
+.PHONY : benchmarks/CMakeFiles/dot_benchmarks.dir/all
+
+# Build rule for subdir invocation for target.
+benchmarks/CMakeFiles/dot_benchmarks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmarks/CMakeFiles/dot_benchmarks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
+.PHONY : benchmarks/CMakeFiles/dot_benchmarks.dir/rule
+
+# Convenience name for target.
+dot_benchmarks: benchmarks/CMakeFiles/dot_benchmarks.dir/rule
+.PHONY : dot_benchmarks
+
+# codegen rule for target.
+benchmarks/CMakeFiles/dot_benchmarks.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/dot_benchmarks.dir/build.make benchmarks/CMakeFiles/dot_benchmarks.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=11,12 "Finished codegen for target dot_benchmarks"
+.PHONY : benchmarks/CMakeFiles/dot_benchmarks.dir/codegen
+
+# clean rule for target.
+benchmarks/CMakeFiles/dot_benchmarks.dir/clean:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/dot_benchmarks.dir/build.make benchmarks/CMakeFiles/dot_benchmarks.dir/clean
+.PHONY : benchmarks/CMakeFiles/dot_benchmarks.dir/clean
+
+#=============================================================================
+# Target rules for target benchmarks/CMakeFiles/blas_dot_benchmarks.dir
+
+# All Build rule for target.
+benchmarks/CMakeFiles/blas_dot_benchmarks.dir/all: CMakeFiles/cppgrad_tensor.dir/all
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_dot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_dot_benchmarks.dir/depend
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_dot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_dot_benchmarks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=1,2 "Built target blas_dot_benchmarks"
+.PHONY : benchmarks/CMakeFiles/blas_dot_benchmarks.dir/all
+
+# Build rule for subdir invocation for target.
+benchmarks/CMakeFiles/blas_dot_benchmarks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmarks/CMakeFiles/blas_dot_benchmarks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
+.PHONY : benchmarks/CMakeFiles/blas_dot_benchmarks.dir/rule
+
+# Convenience name for target.
+blas_dot_benchmarks: benchmarks/CMakeFiles/blas_dot_benchmarks.dir/rule
+.PHONY : blas_dot_benchmarks
+
+# codegen rule for target.
+benchmarks/CMakeFiles/blas_dot_benchmarks.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_dot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_dot_benchmarks.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=1,2 "Finished codegen for target blas_dot_benchmarks"
+.PHONY : benchmarks/CMakeFiles/blas_dot_benchmarks.dir/codegen
+
+# clean rule for target.
+benchmarks/CMakeFiles/blas_dot_benchmarks.dir/clean:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_dot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_dot_benchmarks.dir/clean
+.PHONY : benchmarks/CMakeFiles/blas_dot_benchmarks.dir/clean
+
+#=============================================================================
+# Target rules for target benchmarks/CMakeFiles/tensordot_benchmarks.dir
+
+# All Build rule for target.
+benchmarks/CMakeFiles/tensordot_benchmarks.dir/all: CMakeFiles/cppgrad_tensor.dir/all
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/tensordot_benchmarks.dir/depend
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/tensordot_benchmarks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=17,18 "Built target tensordot_benchmarks"
+.PHONY : benchmarks/CMakeFiles/tensordot_benchmarks.dir/all
+
+# Build rule for subdir invocation for target.
+benchmarks/CMakeFiles/tensordot_benchmarks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmarks/CMakeFiles/tensordot_benchmarks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
+.PHONY : benchmarks/CMakeFiles/tensordot_benchmarks.dir/rule
+
+# Convenience name for target.
+tensordot_benchmarks: benchmarks/CMakeFiles/tensordot_benchmarks.dir/rule
+.PHONY : tensordot_benchmarks
+
+# codegen rule for target.
+benchmarks/CMakeFiles/tensordot_benchmarks.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/tensordot_benchmarks.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=17,18 "Finished codegen for target tensordot_benchmarks"
+.PHONY : benchmarks/CMakeFiles/tensordot_benchmarks.dir/codegen
+
+# clean rule for target.
+benchmarks/CMakeFiles/tensordot_benchmarks.dir/clean:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/tensordot_benchmarks.dir/clean
+.PHONY : benchmarks/CMakeFiles/tensordot_benchmarks.dir/clean
+
+#=============================================================================
+# Target rules for target benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir
+
+# All Build rule for target.
+benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/all: CMakeFiles/cppgrad_tensor.dir/all
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/depend
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=5,6 "Built target blas_tensordot_benchmarks"
+.PHONY : benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/all
+
+# Build rule for subdir invocation for target.
+benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles 0
+.PHONY : benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/rule
+
+# Convenience name for target.
+blas_tensordot_benchmarks: benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/rule
+.PHONY : blas_tensordot_benchmarks
+
+# codegen rule for target.
+benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=5,6 "Finished codegen for target blas_tensordot_benchmarks"
+.PHONY : benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/codegen
+
+# clean rule for target.
+benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/clean:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/clean
+.PHONY : benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

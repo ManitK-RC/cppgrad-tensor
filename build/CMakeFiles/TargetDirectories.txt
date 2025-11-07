@@ -1,3 +1,13 @@
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles/cppgrad_tensor.dir
 /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles/examples.dir
 /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles/edit_cache.dir
 /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles/rebuild_cache.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/transpose_benchmarks.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/matmul_benchmarks.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/blas_matmul_benchmarks.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/dot_benchmarks.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/blas_dot_benchmarks.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/tensordot_benchmarks.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/edit_cache.dir
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/CMakeFiles/rebuild_cache.dir

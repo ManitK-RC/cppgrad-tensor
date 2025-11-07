@@ -6,6 +6,8 @@
 
 namespace cppgrad {
 
+// CHANGE TO SPAN INSTEAD OF VECTOR AS INPUT TO TENSOR OPS
+
 // Implement member functions
 template <typename T>
 T Tensor<T>::get(const std::vector<size_t>& indices) const {
@@ -35,6 +37,26 @@ Tensor<T> Tensor<T>::reshape(const std::vector<size_t>& new_shape) const{
     new_strides.push_back(1);
     for(size_t i = 0; i < new_shape.size() - 1; i++) {
         new_strides.push_back(new_strides.back() * new_shape[i]);
+    }
+    return Tensor<T>(raw_ptr_, new_shape, new_strides, device_, requires_grad_, dtype_, size_);
+}
+
+template <typename T>
+Tensor<T> Tensor<T>::permute(const std::span<const size_t>& axes) const{
+    if(axes.size() != shape_.size()) throw std::invalid_argument("Invalid Permute Axes");
+    std::vector<bool> used(shape_.size(), false); // no neg axes
+    for (size_t i = 0; i < axes.size(); i++) {
+        if (axes[i] < 0 || axes[i] >= shape_.size()) throw std::invalid_argument("Invalid Permute Axes");
+        if (used[axes[i]])  throw std::invalid_argument("Invalid Permute Axes");
+        used[axes[i]] = true;
+    }
+    std::vector<size_t> new_shape;
+    std::vector<size_t> new_strides;
+    new_shape.reserve(axes.size());
+    new_strides.reserve(axes.size());
+    for (int axis : axes) {
+        new_shape.push_back(shape_[axis]);
+        new_strides.push_back(strides_[axis]);
     }
     return Tensor<T>(raw_ptr_, new_shape, new_strides, device_, requires_grad_, dtype_, size_);
 }

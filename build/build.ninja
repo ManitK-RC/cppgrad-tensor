@@ -41,13 +41,64 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target cppgrad_tensor
+
+
+#############################################
+# Order-only phony target for cppgrad_tensor
+
+build cmake_object_order_depends_target_cppgrad_tensor: phony || .
+
+build CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.o: CXX_COMPILER__cppgrad_tensor_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp || cmake_object_order_depends_target_cppgrad_tensor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -I/opt/homebrew/Cellar/openblas/0.3.30/include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src
+  OBJECT_DIR = CMakeFiles/cppgrad_tensor.dir
+  OBJECT_FILE_DIR = CMakeFiles/cppgrad_tensor.dir/src
+
+build CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o: CXX_COMPILER__cppgrad_tensor_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp || cmake_object_order_depends_target_cppgrad_tensor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -I/opt/homebrew/Cellar/openblas/0.3.30/include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src
+  OBJECT_DIR = CMakeFiles/cppgrad_tensor.dir
+  OBJECT_FILE_DIR = CMakeFiles/cppgrad_tensor.dir/src
+
+build CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o: CXX_COMPILER__cppgrad_tensor_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp || cmake_object_order_depends_target_cppgrad_tensor
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -I/opt/homebrew/Cellar/openblas/0.3.30/include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src
+  OBJECT_DIR = CMakeFiles/cppgrad_tensor.dir
+  OBJECT_FILE_DIR = CMakeFiles/cppgrad_tensor.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target cppgrad_tensor
+
+
+#############################################
+# Link the static library libcppgrad_tensor.a
+
+build libcppgrad_tensor.a: CXX_STATIC_LIBRARY_LINKER__cppgrad_tensor_Debug CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.o CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o
+  ARCH_FLAGS = -arch arm64
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/cppgrad_tensor.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libcppgrad_tensor.a
+  TARGET_PDB = cppgrad_tensor.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target examples
 
 
 #############################################
 # Order-only phony target for examples
 
-build cmake_object_order_depends_target_examples: phony || .
+build cmake_object_order_depends_target_examples: phony || cmake_object_order_depends_target_cppgrad_tensor
 
 build CMakeFiles/examples.dir/test/examples.cpp.o: CXX_COMPILER__examples_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/test/examples.cpp || cmake_object_order_depends_target_examples
   CONFIG = Debug
@@ -57,30 +108,6 @@ build CMakeFiles/examples.dir/test/examples.cpp.o: CXX_COMPILER__examples_unscan
   OBJECT_DIR = CMakeFiles/examples.dir
   OBJECT_FILE_DIR = CMakeFiles/examples.dir/test
 
-build CMakeFiles/examples.dir/src/tensor.cpp.o: CXX_COMPILER__examples_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp || cmake_object_order_depends_target_examples
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/examples.dir/src/tensor.cpp.o.d
-  FLAGS = -g -arch arm64 -std=c++26
-  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include
-  OBJECT_DIR = CMakeFiles/examples.dir
-  OBJECT_FILE_DIR = CMakeFiles/examples.dir/src
-
-build CMakeFiles/examples.dir/src/tensor_ops.cpp.o: CXX_COMPILER__examples_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp || cmake_object_order_depends_target_examples
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/examples.dir/src/tensor_ops.cpp.o.d
-  FLAGS = -g -arch arm64 -std=c++26
-  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include
-  OBJECT_DIR = CMakeFiles/examples.dir
-  OBJECT_FILE_DIR = CMakeFiles/examples.dir/src
-
-build CMakeFiles/examples.dir/src/blas.cpp.o: CXX_COMPILER__examples_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp || cmake_object_order_depends_target_examples
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles/examples.dir/src/blas.cpp.o.d
-  FLAGS = -g -arch arm64 -std=c++26
-  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include
-  OBJECT_DIR = CMakeFiles/examples.dir
-  OBJECT_FILE_DIR = CMakeFiles/examples.dir/src
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target examples
@@ -89,10 +116,11 @@ build CMakeFiles/examples.dir/src/blas.cpp.o: CXX_COMPILER__examples_unscanned_D
 #############################################
 # Link the executable examples
 
-build examples: CXX_EXECUTABLE_LINKER__examples_Debug CMakeFiles/examples.dir/test/examples.cpp.o CMakeFiles/examples.dir/src/tensor.cpp.o CMakeFiles/examples.dir/src/tensor_ops.cpp.o CMakeFiles/examples.dir/src/blas.cpp.o
+build examples: CXX_EXECUTABLE_LINKER__examples_Debug CMakeFiles/examples.dir/test/examples.cpp.o | libcppgrad_tensor.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib || libcppgrad_tensor.a
   CONFIG = Debug
   FLAGS = -g -arch arm64
   LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = libcppgrad_tensor.a  /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
   OBJECT_DIR = CMakeFiles/examples.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -124,7 +152,311 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/manitk/Documents/RC-Github/cppgrad-tensor/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target transpose_benchmarks
+
+
+#############################################
+# Order-only phony target for transpose_benchmarks
+
+build cmake_object_order_depends_target_transpose_benchmarks: phony || cmake_object_order_depends_target_cppgrad_tensor
+
+build benchmarks/CMakeFiles/transpose_benchmarks.dir/src/transpose_benchmark.cpp.o: CXX_COMPILER__transpose_benchmarks_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/transpose_benchmark.cpp || cmake_object_order_depends_target_transpose_benchmarks
+  CONFIG = Debug
+  DEFINES = -DBENCHMARK_STATIC_DEFINE
+  DEP_FILE = benchmarks/CMakeFiles/transpose_benchmarks.dir/src/transpose_benchmark.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include
+  OBJECT_DIR = benchmarks/CMakeFiles/transpose_benchmarks.dir
+  OBJECT_FILE_DIR = benchmarks/CMakeFiles/transpose_benchmarks.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target transpose_benchmarks
+
+
+#############################################
+# Link the executable benchmarks/transpose_benchmarks
+
+build benchmarks/transpose_benchmarks: CXX_EXECUTABLE_LINKER__transpose_benchmarks_Debug benchmarks/CMakeFiles/transpose_benchmarks.dir/src/transpose_benchmark.cpp.o | libcppgrad_tensor.a /opt/homebrew/lib/libbenchmark.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib || libcppgrad_tensor.a
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
+  LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = libcppgrad_tensor.a  /opt/homebrew/lib/libbenchmark.a  /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
+  OBJECT_DIR = benchmarks/CMakeFiles/transpose_benchmarks.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = benchmarks/transpose_benchmarks
+  TARGET_PDB = transpose_benchmarks.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target matmul_benchmarks
+
+
+#############################################
+# Order-only phony target for matmul_benchmarks
+
+build cmake_object_order_depends_target_matmul_benchmarks: phony || cmake_object_order_depends_target_cppgrad_tensor
+
+build benchmarks/CMakeFiles/matmul_benchmarks.dir/src/matmul_benchmark.cpp.o: CXX_COMPILER__matmul_benchmarks_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/matmul_benchmark.cpp || cmake_object_order_depends_target_matmul_benchmarks
+  CONFIG = Debug
+  DEFINES = -DBENCHMARK_STATIC_DEFINE
+  DEP_FILE = benchmarks/CMakeFiles/matmul_benchmarks.dir/src/matmul_benchmark.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include
+  OBJECT_DIR = benchmarks/CMakeFiles/matmul_benchmarks.dir
+  OBJECT_FILE_DIR = benchmarks/CMakeFiles/matmul_benchmarks.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target matmul_benchmarks
+
+
+#############################################
+# Link the executable benchmarks/matmul_benchmarks
+
+build benchmarks/matmul_benchmarks: CXX_EXECUTABLE_LINKER__matmul_benchmarks_Debug benchmarks/CMakeFiles/matmul_benchmarks.dir/src/matmul_benchmark.cpp.o | libcppgrad_tensor.a /opt/homebrew/lib/libbenchmark.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib || libcppgrad_tensor.a
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
+  LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = libcppgrad_tensor.a  /opt/homebrew/lib/libbenchmark.a  /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
+  OBJECT_DIR = benchmarks/CMakeFiles/matmul_benchmarks.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = benchmarks/matmul_benchmarks
+  TARGET_PDB = matmul_benchmarks.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target blas_matmul_benchmarks
+
+
+#############################################
+# Order-only phony target for blas_matmul_benchmarks
+
+build cmake_object_order_depends_target_blas_matmul_benchmarks: phony || cmake_object_order_depends_target_cppgrad_tensor
+
+build benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/src/blas_matmul_benchmark.cpp.o: CXX_COMPILER__blas_matmul_benchmarks_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_matmul_benchmark.cpp || cmake_object_order_depends_target_blas_matmul_benchmarks
+  CONFIG = Debug
+  DEFINES = -DBENCHMARK_STATIC_DEFINE
+  DEP_FILE = benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/src/blas_matmul_benchmark.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include
+  OBJECT_DIR = benchmarks/CMakeFiles/blas_matmul_benchmarks.dir
+  OBJECT_FILE_DIR = benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target blas_matmul_benchmarks
+
+
+#############################################
+# Link the executable benchmarks/blas_matmul_benchmarks
+
+build benchmarks/blas_matmul_benchmarks: CXX_EXECUTABLE_LINKER__blas_matmul_benchmarks_Debug benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/src/blas_matmul_benchmark.cpp.o | libcppgrad_tensor.a /opt/homebrew/lib/libbenchmark.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib || libcppgrad_tensor.a
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
+  LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = libcppgrad_tensor.a  /opt/homebrew/lib/libbenchmark.a  /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
+  OBJECT_DIR = benchmarks/CMakeFiles/blas_matmul_benchmarks.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = benchmarks/blas_matmul_benchmarks
+  TARGET_PDB = blas_matmul_benchmarks.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target dot_benchmarks
+
+
+#############################################
+# Order-only phony target for dot_benchmarks
+
+build cmake_object_order_depends_target_dot_benchmarks: phony || cmake_object_order_depends_target_cppgrad_tensor
+
+build benchmarks/CMakeFiles/dot_benchmarks.dir/src/dot_benchmark.cpp.o: CXX_COMPILER__dot_benchmarks_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/dot_benchmark.cpp || cmake_object_order_depends_target_dot_benchmarks
+  CONFIG = Debug
+  DEFINES = -DBENCHMARK_STATIC_DEFINE
+  DEP_FILE = benchmarks/CMakeFiles/dot_benchmarks.dir/src/dot_benchmark.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include
+  OBJECT_DIR = benchmarks/CMakeFiles/dot_benchmarks.dir
+  OBJECT_FILE_DIR = benchmarks/CMakeFiles/dot_benchmarks.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target dot_benchmarks
+
+
+#############################################
+# Link the executable benchmarks/dot_benchmarks
+
+build benchmarks/dot_benchmarks: CXX_EXECUTABLE_LINKER__dot_benchmarks_Debug benchmarks/CMakeFiles/dot_benchmarks.dir/src/dot_benchmark.cpp.o | libcppgrad_tensor.a /opt/homebrew/lib/libbenchmark.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib || libcppgrad_tensor.a
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
+  LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = libcppgrad_tensor.a  /opt/homebrew/lib/libbenchmark.a  /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
+  OBJECT_DIR = benchmarks/CMakeFiles/dot_benchmarks.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = benchmarks/dot_benchmarks
+  TARGET_PDB = dot_benchmarks.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target blas_dot_benchmarks
+
+
+#############################################
+# Order-only phony target for blas_dot_benchmarks
+
+build cmake_object_order_depends_target_blas_dot_benchmarks: phony || cmake_object_order_depends_target_cppgrad_tensor
+
+build benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o: CXX_COMPILER__blas_dot_benchmarks_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_dot_benchmark.cpp || cmake_object_order_depends_target_blas_dot_benchmarks
+  CONFIG = Debug
+  DEFINES = -DBENCHMARK_STATIC_DEFINE
+  DEP_FILE = benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include
+  OBJECT_DIR = benchmarks/CMakeFiles/blas_dot_benchmarks.dir
+  OBJECT_FILE_DIR = benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target blas_dot_benchmarks
+
+
+#############################################
+# Link the executable benchmarks/blas_dot_benchmarks
+
+build benchmarks/blas_dot_benchmarks: CXX_EXECUTABLE_LINKER__blas_dot_benchmarks_Debug benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o | libcppgrad_tensor.a /opt/homebrew/lib/libbenchmark.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib || libcppgrad_tensor.a
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
+  LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = libcppgrad_tensor.a  /opt/homebrew/lib/libbenchmark.a  /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
+  OBJECT_DIR = benchmarks/CMakeFiles/blas_dot_benchmarks.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = benchmarks/blas_dot_benchmarks
+  TARGET_PDB = blas_dot_benchmarks.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tensordot_benchmarks
+
+
+#############################################
+# Order-only phony target for tensordot_benchmarks
+
+build cmake_object_order_depends_target_tensordot_benchmarks: phony || cmake_object_order_depends_target_cppgrad_tensor
+
+build benchmarks/CMakeFiles/tensordot_benchmarks.dir/src/tensordot_benchmark.cpp.o: CXX_COMPILER__tensordot_benchmarks_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/tensordot_benchmark.cpp || cmake_object_order_depends_target_tensordot_benchmarks
+  CONFIG = Debug
+  DEFINES = -DBENCHMARK_STATIC_DEFINE
+  DEP_FILE = benchmarks/CMakeFiles/tensordot_benchmarks.dir/src/tensordot_benchmark.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include
+  OBJECT_DIR = benchmarks/CMakeFiles/tensordot_benchmarks.dir
+  OBJECT_FILE_DIR = benchmarks/CMakeFiles/tensordot_benchmarks.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tensordot_benchmarks
+
+
+#############################################
+# Link the executable benchmarks/tensordot_benchmarks
+
+build benchmarks/tensordot_benchmarks: CXX_EXECUTABLE_LINKER__tensordot_benchmarks_Debug benchmarks/CMakeFiles/tensordot_benchmarks.dir/src/tensordot_benchmark.cpp.o | libcppgrad_tensor.a /opt/homebrew/lib/libbenchmark.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib || libcppgrad_tensor.a
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
+  LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = libcppgrad_tensor.a  /opt/homebrew/lib/libbenchmark.a  /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
+  OBJECT_DIR = benchmarks/CMakeFiles/tensordot_benchmarks.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = benchmarks/tensordot_benchmarks
+  TARGET_PDB = tensordot_benchmarks.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target blas_tensordot_benchmarks
+
+
+#############################################
+# Order-only phony target for blas_tensordot_benchmarks
+
+build cmake_object_order_depends_target_blas_tensordot_benchmarks: phony || cmake_object_order_depends_target_cppgrad_tensor
+
+build benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/src/blas_tensordot_benchmark.cpp.o: CXX_COMPILER__blas_tensordot_benchmarks_unscanned_Debug /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/src/blas_tensordot_benchmark.cpp || cmake_object_order_depends_target_blas_tensordot_benchmarks
+  CONFIG = Debug
+  DEFINES = -DBENCHMARK_STATIC_DEFINE
+  DEP_FILE = benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/src/blas_tensordot_benchmark.cpp.o.d
+  FLAGS = -g -arch arm64 -std=c++26 -O3 -DNDEBUG -march=native
+  INCLUDES = -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include -I/Users/manitk/Documents/RC-Github/cppgrad-tensor/include -isystem /opt/homebrew/include
+  OBJECT_DIR = benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir
+  OBJECT_FILE_DIR = benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target blas_tensordot_benchmarks
+
+
+#############################################
+# Link the executable benchmarks/blas_tensordot_benchmarks
+
+build benchmarks/blas_tensordot_benchmarks: CXX_EXECUTABLE_LINKER__blas_tensordot_benchmarks_Debug benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/src/blas_tensordot_benchmark.cpp.o | libcppgrad_tensor.a /opt/homebrew/lib/libbenchmark.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib || libcppgrad_tensor.a
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
+  LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
+  LINK_LIBRARIES = libcppgrad_tensor.a  /opt/homebrew/lib/libbenchmark.a  /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
+  OBJECT_DIR = benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = benchmarks/blas_tensordot_benchmarks
+  TARGET_PDB = blas_tensordot_benchmarks.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build benchmarks/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks && /opt/homebrew/bin/ccmake -S/Users/manitk/Documents/RC-Github/cppgrad-tensor -B/Users/manitk/Documents/RC-Github/cppgrad-tensor/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build benchmarks/edit_cache: phony benchmarks/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build benchmarks/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks && /opt/homebrew/bin/cmake --regenerate-during-build -S/Users/manitk/Documents/RC-Github/cppgrad-tensor -B/Users/manitk/Documents/RC-Github/cppgrad-tensor/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build benchmarks/rebuild_cache: phony benchmarks/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
+
+build blas_dot_benchmarks: phony benchmarks/blas_dot_benchmarks
+
+build blas_matmul_benchmarks: phony benchmarks/blas_matmul_benchmarks
+
+build blas_tensordot_benchmarks: phony benchmarks/blas_tensordot_benchmarks
+
+build cppgrad_tensor: phony libcppgrad_tensor.a
+
+build dot_benchmarks: phony benchmarks/dot_benchmarks
+
+build matmul_benchmarks: phony benchmarks/matmul_benchmarks
+
+build tensordot_benchmarks: phony benchmarks/tensordot_benchmarks
+
+build transpose_benchmarks: phony benchmarks/transpose_benchmarks
 
 # =============================================================================
 # Folder targets.
@@ -134,7 +466,14 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/manitk/Documents/RC-Github/cppgrad-tensor/build
 
-build all: phony examples
+build all: phony libcppgrad_tensor.a examples benchmarks/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks
+
+build benchmarks/all: phony benchmarks/transpose_benchmarks benchmarks/matmul_benchmarks benchmarks/blas_matmul_benchmarks benchmarks/dot_benchmarks benchmarks/blas_dot_benchmarks benchmarks/tensordot_benchmarks benchmarks/blas_tensordot_benchmarks
 
 # =============================================================================
 # Built-in targets
@@ -143,14 +482,14 @@ build all: phony examples
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/cmake_install.cmake: RERUN_CMAKE | /Users/manitk/Documents/RC-Github/cppgrad-tensor/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake
+build build.ninja /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/cmake_install.cmake /Users/manitk/Documents/RC-Github/cppgrad-tensor/build/benchmarks/cmake_install.cmake: RERUN_CMAKE | /Users/manitk/Documents/RC-Github/cppgrad-tensor/CMakeLists.txt /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/CMakeLists.txt /opt/homebrew/lib/cmake/benchmark/benchmarkConfig.cmake /opt/homebrew/lib/cmake/benchmark/benchmarkConfigVersion.cmake /opt/homebrew/lib/cmake/benchmark/benchmarkTargets-release.cmake /opt/homebrew/lib/cmake/benchmark/benchmarkTargets.cmake /opt/homebrew/opt/openblas/lib/cmake/openblas/OpenBLASConfig.cmake /opt/homebrew/opt/openblas/lib/cmake/openblas/OpenBLASConfigVersion.cmake /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindThreads.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/manitk/Documents/RC-Github/cppgrad-tensor/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake: phony
+build /Users/manitk/Documents/RC-Github/cppgrad-tensor/CMakeLists.txt /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/CMakeLists.txt /opt/homebrew/lib/cmake/benchmark/benchmarkConfig.cmake /opt/homebrew/lib/cmake/benchmark/benchmarkConfigVersion.cmake /opt/homebrew/lib/cmake/benchmark/benchmarkTargets-release.cmake /opt/homebrew/lib/cmake/benchmark/benchmarkTargets.cmake /opt/homebrew/opt/openblas/lib/cmake/openblas/OpenBLASConfig.cmake /opt/homebrew/opt/openblas/lib/cmake/openblas/OpenBLASConfigVersion.cmake /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/FindThreads.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake: phony
 
 
 #############################################

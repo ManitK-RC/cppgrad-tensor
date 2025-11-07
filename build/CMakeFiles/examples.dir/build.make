@@ -86,65 +86,19 @@ CMakeFiles/examples.dir/test/examples.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/examples.dir/test/examples.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/manitk/Documents/RC-Github/cppgrad-tensor/test/examples.cpp -o CMakeFiles/examples.dir/test/examples.cpp.s
 
-CMakeFiles/examples.dir/src/tensor.cpp.o: CMakeFiles/examples.dir/flags.make
-CMakeFiles/examples.dir/src/tensor.cpp.o: /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp
-CMakeFiles/examples.dir/src/tensor.cpp.o: CMakeFiles/examples.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/examples.dir/src/tensor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/examples.dir/src/tensor.cpp.o -MF CMakeFiles/examples.dir/src/tensor.cpp.o.d -o CMakeFiles/examples.dir/src/tensor.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp
-
-CMakeFiles/examples.dir/src/tensor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/examples.dir/src/tensor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp > CMakeFiles/examples.dir/src/tensor.cpp.i
-
-CMakeFiles/examples.dir/src/tensor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/examples.dir/src/tensor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor.cpp -o CMakeFiles/examples.dir/src/tensor.cpp.s
-
-CMakeFiles/examples.dir/src/tensor_ops.cpp.o: CMakeFiles/examples.dir/flags.make
-CMakeFiles/examples.dir/src/tensor_ops.cpp.o: /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp
-CMakeFiles/examples.dir/src/tensor_ops.cpp.o: CMakeFiles/examples.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/examples.dir/src/tensor_ops.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/examples.dir/src/tensor_ops.cpp.o -MF CMakeFiles/examples.dir/src/tensor_ops.cpp.o.d -o CMakeFiles/examples.dir/src/tensor_ops.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp
-
-CMakeFiles/examples.dir/src/tensor_ops.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/examples.dir/src/tensor_ops.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp > CMakeFiles/examples.dir/src/tensor_ops.cpp.i
-
-CMakeFiles/examples.dir/src/tensor_ops.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/examples.dir/src/tensor_ops.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp -o CMakeFiles/examples.dir/src/tensor_ops.cpp.s
-
-CMakeFiles/examples.dir/src/blas.cpp.o: CMakeFiles/examples.dir/flags.make
-CMakeFiles/examples.dir/src/blas.cpp.o: /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp
-CMakeFiles/examples.dir/src/blas.cpp.o: CMakeFiles/examples.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/examples.dir/src/blas.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/examples.dir/src/blas.cpp.o -MF CMakeFiles/examples.dir/src/blas.cpp.o.d -o CMakeFiles/examples.dir/src/blas.cpp.o -c /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp
-
-CMakeFiles/examples.dir/src/blas.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/examples.dir/src/blas.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp > CMakeFiles/examples.dir/src/blas.cpp.i
-
-CMakeFiles/examples.dir/src/blas.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/examples.dir/src/blas.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp -o CMakeFiles/examples.dir/src/blas.cpp.s
-
 # Object files for target examples
 examples_OBJECTS = \
-"CMakeFiles/examples.dir/test/examples.cpp.o" \
-"CMakeFiles/examples.dir/src/tensor.cpp.o" \
-"CMakeFiles/examples.dir/src/tensor_ops.cpp.o" \
-"CMakeFiles/examples.dir/src/blas.cpp.o"
+"CMakeFiles/examples.dir/test/examples.cpp.o"
 
 # External object files for target examples
 examples_EXTERNAL_OBJECTS =
 
 examples: CMakeFiles/examples.dir/test/examples.cpp.o
-examples: CMakeFiles/examples.dir/src/tensor.cpp.o
-examples: CMakeFiles/examples.dir/src/tensor_ops.cpp.o
-examples: CMakeFiles/examples.dir/src/blas.cpp.o
 examples: CMakeFiles/examples.dir/build.make
+examples: libcppgrad_tensor.a
+examples: /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
 examples: CMakeFiles/examples.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable examples"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/manitk/Documents/RC-Github/cppgrad-tensor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable examples"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/examples.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

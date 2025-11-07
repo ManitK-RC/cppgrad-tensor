@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cppgrad_tensor
+
+# Build rule for target.
+cppgrad_tensor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cppgrad_tensor
+.PHONY : cppgrad_tensor
+
+# fast build rule for target.
+cppgrad_tensor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/build
+.PHONY : cppgrad_tensor/fast
+
+#=============================================================================
 # Target rules for targets named examples
 
 # Build rule for target.
@@ -129,12 +142,103 @@ examples/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/build
 .PHONY : examples/fast
 
+#=============================================================================
+# Target rules for targets named transpose_benchmarks
+
+# Build rule for target.
+transpose_benchmarks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 transpose_benchmarks
+.PHONY : transpose_benchmarks
+
+# fast build rule for target.
+transpose_benchmarks/fast:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/transpose_benchmarks.dir/build.make benchmarks/CMakeFiles/transpose_benchmarks.dir/build
+.PHONY : transpose_benchmarks/fast
+
+#=============================================================================
+# Target rules for targets named matmul_benchmarks
+
+# Build rule for target.
+matmul_benchmarks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matmul_benchmarks
+.PHONY : matmul_benchmarks
+
+# fast build rule for target.
+matmul_benchmarks/fast:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/matmul_benchmarks.dir/build
+.PHONY : matmul_benchmarks/fast
+
+#=============================================================================
+# Target rules for targets named blas_matmul_benchmarks
+
+# Build rule for target.
+blas_matmul_benchmarks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 blas_matmul_benchmarks
+.PHONY : blas_matmul_benchmarks
+
+# fast build rule for target.
+blas_matmul_benchmarks/fast:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_matmul_benchmarks.dir/build
+.PHONY : blas_matmul_benchmarks/fast
+
+#=============================================================================
+# Target rules for targets named dot_benchmarks
+
+# Build rule for target.
+dot_benchmarks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dot_benchmarks
+.PHONY : dot_benchmarks
+
+# fast build rule for target.
+dot_benchmarks/fast:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/dot_benchmarks.dir/build.make benchmarks/CMakeFiles/dot_benchmarks.dir/build
+.PHONY : dot_benchmarks/fast
+
+#=============================================================================
+# Target rules for targets named blas_dot_benchmarks
+
+# Build rule for target.
+blas_dot_benchmarks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 blas_dot_benchmarks
+.PHONY : blas_dot_benchmarks
+
+# fast build rule for target.
+blas_dot_benchmarks/fast:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_dot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_dot_benchmarks.dir/build
+.PHONY : blas_dot_benchmarks/fast
+
+#=============================================================================
+# Target rules for targets named tensordot_benchmarks
+
+# Build rule for target.
+tensordot_benchmarks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tensordot_benchmarks
+.PHONY : tensordot_benchmarks
+
+# fast build rule for target.
+tensordot_benchmarks/fast:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/tensordot_benchmarks.dir/build
+.PHONY : tensordot_benchmarks/fast
+
+#=============================================================================
+# Target rules for targets named blas_tensordot_benchmarks
+
+# Build rule for target.
+blas_tensordot_benchmarks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 blas_tensordot_benchmarks
+.PHONY : blas_tensordot_benchmarks
+
+# fast build rule for target.
+blas_tensordot_benchmarks/fast:
+	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/build.make benchmarks/CMakeFiles/blas_tensordot_benchmarks.dir/build
+.PHONY : blas_tensordot_benchmarks/fast
+
 src/blas.o: src/blas.cpp.o
 .PHONY : src/blas.o
 
 # target to build an object file
 src/blas.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/blas.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o
 .PHONY : src/blas.cpp.o
 
 src/blas.i: src/blas.cpp.i
@@ -142,7 +246,7 @@ src/blas.i: src/blas.cpp.i
 
 # target to preprocess a source file
 src/blas.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/blas.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.i
 .PHONY : src/blas.cpp.i
 
 src/blas.s: src/blas.cpp.s
@@ -150,7 +254,7 @@ src/blas.s: src/blas.cpp.s
 
 # target to generate assembly for a file
 src/blas.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/blas.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.s
 .PHONY : src/blas.cpp.s
 
 src/tensor.o: src/tensor.cpp.o
@@ -158,7 +262,7 @@ src/tensor.o: src/tensor.cpp.o
 
 # target to build an object file
 src/tensor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/tensor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.o
 .PHONY : src/tensor.cpp.o
 
 src/tensor.i: src/tensor.cpp.i
@@ -166,7 +270,7 @@ src/tensor.i: src/tensor.cpp.i
 
 # target to preprocess a source file
 src/tensor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/tensor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.i
 .PHONY : src/tensor.cpp.i
 
 src/tensor.s: src/tensor.cpp.s
@@ -174,7 +278,7 @@ src/tensor.s: src/tensor.cpp.s
 
 # target to generate assembly for a file
 src/tensor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/tensor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.s
 .PHONY : src/tensor.cpp.s
 
 src/tensor_ops.o: src/tensor_ops.cpp.o
@@ -182,7 +286,7 @@ src/tensor_ops.o: src/tensor_ops.cpp.o
 
 # target to build an object file
 src/tensor_ops.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/tensor_ops.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o
 .PHONY : src/tensor_ops.cpp.o
 
 src/tensor_ops.i: src/tensor_ops.cpp.i
@@ -190,7 +294,7 @@ src/tensor_ops.i: src/tensor_ops.cpp.i
 
 # target to preprocess a source file
 src/tensor_ops.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/tensor_ops.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.i
 .PHONY : src/tensor_ops.cpp.i
 
 src/tensor_ops.s: src/tensor_ops.cpp.s
@@ -198,7 +302,7 @@ src/tensor_ops.s: src/tensor_ops.cpp.s
 
 # target to generate assembly for a file
 src/tensor_ops.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/examples.dir/build.make CMakeFiles/examples.dir/src/tensor_ops.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppgrad_tensor.dir/build.make CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.s
 .PHONY : src/tensor_ops.cpp.s
 
 test/examples.o: test/examples.cpp.o
@@ -233,7 +337,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... blas_dot_benchmarks"
+	@echo "... blas_matmul_benchmarks"
+	@echo "... blas_tensordot_benchmarks"
+	@echo "... cppgrad_tensor"
+	@echo "... dot_benchmarks"
 	@echo "... examples"
+	@echo "... matmul_benchmarks"
+	@echo "... tensordot_benchmarks"
+	@echo "... transpose_benchmarks"
 	@echo "... src/blas.o"
 	@echo "... src/blas.i"
 	@echo "... src/blas.s"

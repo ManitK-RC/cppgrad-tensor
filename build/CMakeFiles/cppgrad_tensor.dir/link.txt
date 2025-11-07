@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcppgrad_tensor.a CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.o CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o
+/usr/bin/ranlib libcppgrad_tensor.a

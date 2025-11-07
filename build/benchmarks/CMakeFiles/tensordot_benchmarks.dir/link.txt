@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm/lib CMakeFiles/tensordot_benchmarks.dir/src/tensordot_benchmark.cpp.o -o tensordot_benchmarks  ../libcppgrad_tensor.a /opt/homebrew/lib/libbenchmark.a /opt/homebrew/Cellar/openblas/0.3.30/lib/libopenblas.dylib
