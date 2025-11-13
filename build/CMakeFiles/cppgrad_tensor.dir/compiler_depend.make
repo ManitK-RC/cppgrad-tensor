@@ -779,8 +779,8 @@ CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o: /Users/manitk/Documents/RC-Github/
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp \
   /opt/homebrew/Cellar/openblas/0.3.30/include/cblas.h \
   /opt/homebrew/Cellar/openblas/0.3.30/include/openblas_config.h
 
@@ -1562,8 +1562,8 @@ CMakeFiles/cppgrad_tensor.dir/src/tensor.cpp.o: /Users/manitk/Documents/RC-Githu
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp
 
 CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o: /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/tensor_ops.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -2343,13 +2343,15 @@ CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o: /Users/manitk/Documents/RC-G
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp
 
 
 /opt/homebrew/Cellar/openblas/0.3.30/include/openblas_config.h:
 
-/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp:
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp:
+
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
 
@@ -2428,8 +2430,6 @@ CMakeFiles/cppgrad_tensor.dir/src/tensor_ops.cpp.o: /Users/manitk/Documents/RC-G
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stddef.h:
-
-/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h:
 

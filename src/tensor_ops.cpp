@@ -1,10 +1,10 @@
-#include "cppgrad/tensor.hpp"
+#include "cppgrad_tensor/tensor.hpp"
 #include <algorithm>
 #include <stdexcept>
 #include <numeric>
 #include <limits>
 
-namespace cppgrad {
+namespace cppgrad_tensor {
 
 // CHANGE TO SPAN INSTEAD OF VECTOR AS INPUT TO TENSOR OPS
 
@@ -110,8 +110,8 @@ Tensor<T> Tensor<T>::squeeze(int dim) const {
 
 }
 
-template class cppgrad::Tensor<float>;
-template class cppgrad::Tensor<double>;
-template class cppgrad::Tensor<int32_t>;
-template class cppgrad::Tensor<int64_t>;
-template class cppgrad::Tensor<bool>;
+template class cppgrad_tensor::Tensor<float>;
+template class cppgrad_tensor::Tensor<double>;
+template class cppgrad_tensor::Tensor<int32_t>;
+template class cppgrad_tensor::Tensor<int64_t>;
+template class cppgrad_tensor::Tensor<bool>;

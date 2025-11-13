@@ -915,13 +915,11 @@ benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o: /Use
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp \
   /usr/local/include/benchmark/benchmark.h \
   /usr/local/include/benchmark/export.h
 
-
-/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
 
@@ -1230,8 +1228,6 @@ benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o: /Use
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pod.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_destructible.h:
-
-/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
 
@@ -1654,6 +1650,8 @@ benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o: /Use
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/container_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/prev.h:
+
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__new/global_typed_new_delete.h:
 
@@ -2584,6 +2582,8 @@ benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o: /Use
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/bit_log2.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h:
+
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:
 

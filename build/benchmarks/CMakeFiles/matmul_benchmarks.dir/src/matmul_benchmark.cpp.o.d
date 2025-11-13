@@ -844,10 +844,10 @@ benchmarks/CMakeFiles/matmul_benchmarks.dir/src/matmul_benchmark.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/no_destroy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdlib \
   /usr/local/include/benchmark/export.h \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include/cppgrad/tensor.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include/cppgrad_tensor/tensor.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/span \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/span.h \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include/cppgrad/types.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/benchmarks/../include/cppgrad_tensor/types.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/random \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h \

@@ -916,8 +916,8 @@ benchmarks/CMakeFiles/blas_dot_benchmarks.dir/src/blas_dot_benchmark.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h
  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h
- /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp
- /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp
+ /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp
+ /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp
  /usr/local/include/benchmark/benchmark.h
  /usr/local/include/benchmark/export.h
 

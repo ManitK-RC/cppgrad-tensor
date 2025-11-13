@@ -1,6 +1,6 @@
 CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o: \
   /Users/manitk/Documents/RC-Github/cppgrad-tensor/src/blas.cpp \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -562,7 +562,7 @@ CMakeFiles/cppgrad_tensor.dir/src/blas.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/span \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/span.h \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_cv_quals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/aligned_union.h \

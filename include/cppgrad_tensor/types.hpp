@@ -3,7 +3,7 @@
 #include <type_traits>
 #include <cstdint>
 
-namespace cppgrad {
+namespace cppgrad_tensor {
 
 enum class DType : uint8_t {
     FLOAT32,

@@ -3,7 +3,7 @@
 #include <ostream>
 #include "tensor.hpp"
 
-namespace cppgrad {
+namespace cppgrad_tensor {
 
 // Template function declarations
 template<typename T, typename Op>

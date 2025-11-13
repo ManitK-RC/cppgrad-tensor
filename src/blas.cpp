@@ -1,10 +1,10 @@
-#include "cppgrad/tensor.hpp"
+#include "cppgrad_tensor/tensor.hpp"
 #include <algorithm>
 #include <stdexcept>
 #include <numeric>
 #include <cblas.h>
 
-namespace cppgrad {
+namespace cppgrad_tensor {
 
     // Scalar dot product between two vectors
     template <typename T>
@@ -638,8 +638,8 @@ namespace cppgrad {
 
 }
 
-template class cppgrad::Tensor<float>;
-template class cppgrad::Tensor<double>;
-template class cppgrad::Tensor<int32_t>;
-template class cppgrad::Tensor<int64_t>;
-template class cppgrad::Tensor<bool>;
+template class cppgrad_tensor::Tensor<float>;
+template class cppgrad_tensor::Tensor<double>;
+template class cppgrad_tensor::Tensor<int32_t>;
+template class cppgrad_tensor::Tensor<int64_t>;
+template class cppgrad_tensor::Tensor<bool>;

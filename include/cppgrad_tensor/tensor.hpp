@@ -6,7 +6,7 @@
 #include <span>
 #include "types.hpp"
 
-namespace cppgrad {
+namespace cppgrad_tensor {
 
 template<typename T>
 class Tensor {

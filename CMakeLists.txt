@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(cppgrad_examples)
+project(cppgrad_tensor)
 
 add_library(cppgrad_tensor
     src/tensor.cpp

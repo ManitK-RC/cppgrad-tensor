@@ -64,6 +64,7 @@
         "generator": "cpp",
         "ranges": "cpp",
         "stacktrace": "cpp",
-        "text_encoding": "cpp"
+        "text_encoding": "cpp",
+        "random": "cpp"
     }
 }
