@@ -743,13 +743,15 @@ CMakeFiles/examples.dir/test/examples.cpp.o: /Users/manitk/Documents/RC-Github/c
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/cppgrad.hpp \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/elementwise_ops.hpp \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp \
-  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/cppgrad_tensor.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/elementwise_ops.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp \
+  /Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp
 
 
-/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/tensor.hpp:
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/types.hpp:
+
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/tensor.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
 
@@ -870,8 +872,6 @@ CMakeFiles/examples.dir/test/examples.cpp.o: /Users/manitk/Documents/RC-Github/c
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stddef.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h:
-
-/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/types.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h:
 
@@ -1182,6 +1182,8 @@ CMakeFiles/examples.dir/test/examples.cpp.o: /Users/manitk/Documents/RC-Github/c
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_cv_quals.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_types.h:
+
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/elementwise_ops.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find.h:
 
@@ -1516,8 +1518,6 @@ CMakeFiles/examples.dir/test/examples.cpp.o: /Users/manitk/Documents/RC-Github/c
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/is_transparent.h:
-
-/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/elementwise_ops.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/byte.h:
 
@@ -1889,6 +1889,8 @@ CMakeFiles/examples.dir/test/examples.cpp.o: /Users/manitk/Documents/RC-Github/c
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_temporary_buffer.h:
 
+/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad_tensor/cppgrad_tensor.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_tuple.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream:
@@ -1916,8 +1918,6 @@ CMakeFiles/examples.dir/test/examples.cpp.o: /Users/manitk/Documents/RC-Github/c
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/remove_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__compare/three_way_comparable.h:
-
-/Users/manitk/Documents/RC-Github/cppgrad-tensor/include/cppgrad/cppgrad.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_sentinel.h:
 
